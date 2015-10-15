@@ -1,4 +1,4 @@
-# Airbnb CSS / Sass Styleguide
+# YM CSS / Sass Styleguide
 
 *A mostly reasonable approach to CSS and Sass*
 
@@ -9,6 +9,7 @@
     - [Selectors](#selectors)
     - [Properties](#properties)
   1. [CSS](#css)
+    - [Best Practises](#best-practises)
     - [Formatting](#formatting)
     - [Comments](#comments)
     - [OOCSS and BEM](#oocss-and-bem)
@@ -52,6 +53,9 @@ In a rule declaration, “selectors” are the bits that determine which element
 
 Finally, properties are what give the selected elements of a rule declaration their style. Properties are key-value pairs, and a rule declaration can contain one or more property declarations. Property declarations look like this:
 
+* Use PX over EM or REM unless needed
+* Put blank lines between rule declarations
+
 ```css
 /* some selector */ {
   background: #f1f1f1;
@@ -61,11 +65,17 @@ Finally, properties are what give the selected elements of a rule declaration th
 
 ## CSS
 
+### Best practices
+
+* Use PX over EM or REM unless needed
+* Use `* { box-sizing: border-box;}`, use one box-sizing for the entire project
+* Use `autoprefixer` instead of browser specific properties or mixins
+
 ### Formatting
 
 * Use soft tabs (2 spaces) for indentation
 * Prefer dashes over camelCasing in class names. Underscores are OK if you're using BEM (see [OOCSS and BEM](#oocss-and-bem) below).
-* Do not use ID selectors
+* Do not use ID selectors unless you have to
 * When using multiple selectors in a rule declaration, give each selector its own line.
 * Put a space before the opening brace `{` in rule declarations
 * In properties, put a space after, but not before, the `:` character.
@@ -175,6 +185,7 @@ We recommend creating JavaScript-specific classes to bind to, prefixed with `.js
 
 * Use the `.scss` syntax, never the original `.sass` syntax
 * Order your `@extend`, regular CSS and `@include` declarations logically (see below)
+* We prefer good use of generic classes over `@include` or `@extend`
 
 ### Ordering of property declarations
 

@@ -9,7 +9,7 @@
     - [Selectors](#selectors)
     - [Properties](#properties)
   1. [CSS](#css)
-    - [Best Practises](#best-practises)
+    - [Best Practises](#best-practices)
     - [Formatting](#formatting)
     - [Comments](#comments)
     - [OOCSS and BEM](#oocss-and-bem)
